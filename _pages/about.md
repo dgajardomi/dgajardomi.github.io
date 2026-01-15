@@ -13,7 +13,16 @@ I obtained my PhD in Mathematics at the Institut de Mathématiques de Toulouse u
 
 My research interests lie primarily in the analysis of partial differential equations. I am particularly interested in the study of fluid–structure interaction problems, with a focus on questions related to well-posedness, stabilization, and numerical aspects.
 
+<br><br><br><br><br><br><br><br><br>
 
-<p align="center">
-  <img src="{{ site.baseurl }}/images/mesh.gif" alt="Mesh animation" width="400">
-</p>
+
+<p>Visitors: <span id="count">0</span></p>
+
+<br>
+<script>
+  fetch('https://api.countapi.xyz/hit/dgajardomi.github.io/visitas')
+    .then(res => res.json())
+    .then(res => {
+      document.getElementById('count').textContent = res.value;
+    });
+</script>

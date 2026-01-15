@@ -19,7 +19,11 @@ Work experience
 * ATER Université de Toulouse, 2024-2026.
 * Part-time lecturer, Universidad Técnica Federico Santa María, 2019-2021.
  
-  
+Research visits
+======
+* Universidad del Valle, Colombia (13/10/2018 - 24/10/2018).
+Invited by Prof. Juan-Carlos Muñoz Grajales.
+
 Organizing responsabilities
 ======
 * Organizer of the PDE student seminar at the Institut de Mathématiques de Toulouse, 09/2023 - 06/2025.

@@ -3,5 +3,89 @@ layout: archive
 permalink: /portfolio/
 author_profile: true
 ---
+<!DOCTYPE html>
+<html lang="en">
+<body>
 
-Numerical Simulations
+<pr><h2>Numerical simulations of the stabilization of a fluid-structure interaction system around a stationary solution</h2></pr>
+
+
+
+<p><u><h3>Context</h3></u></p>
+<p>We consider the fluid-structure interaction (FSI) system in which the fluid is governed by the two–dimensional incompressible Navier–Stokes equations with mixed boundary conditions, while the structure, immersed in the fluid, is modeled by the Euler–Bernoulli equations with damping, with one end clamped and the other free:<br>
+\[\partial_t\mathbf{u} + (\mathbf{u}\cdot\nabla)\mathbf{u} - div\hspace{0.1cm}\sigma(\mathbf{u}, p)  = 0, 
+\hspace{0.2cm} div\hspace{0.1cm}\mathbf{u} = 0\hspace{0.2cm}\text{in}\hspace{0.1cm} Q_{\eta}^{\infty}:= \bigcup_{t\in(0,\infty)}\{t\}\times\Omega_{\eta(t)},\]
+\[\text{+ Mixed boundary condition + Initial condition + kinematic condition},\]
+\[\partial_t^2\eta + \alpha\Delta_s^2\eta + \gamma D\eta_t = H(\mathbf{u}, p, \eta) + \textcolor{blue}{f} + f_s,\]
+\[\text{+ Boundary conditions + Initial condition},\]
+where \(\mathbf{u}\) and \(p\) represent the fluid velocity and the pressure, respectively, and \(\eta\) the displacement of the structure. Here, \(\sigma(\mathbf{u},p)\) represents the Cauchy stress tensor, \(D\) is the damping operator, \(H=H(\mathbf{u}, p, \eta)\) the force exerted by the fluid on the structure (acting on its upper and lower parts), \(\textcolor{blue}{f}\) is the control, and \(f_s\) a given constant force.<br><br>
+
+The geometrical configuration is shown in Fig. 1.</p>
+<br>
+<p align="center">
+  <img src="{{ site.baseurl }}/images/deformed_config.jpeg" alt="fluid_velocity" width="450">
+</p>
+<p style="text-align: center; margin-top: 10px;">
+  Figure 1: Physical domain.
+</p>
+<p><u><h3>Numerical tests</h3></u></p>
+<p>In the numerical simulations shown below, we use a Reynolds number \(Re = 200\), a rigidy coefficient \(\alpha=10^{-1}\), and a damping coefficient \(\gamma=10^{-6}\).</p>
+
+<pr>Our objective is to stabilizes the FSI system around a stationary solution (Fig. 2 shows the magnitude of the stationary fluid velocity) by applying a force \(\textcolor{blue}{f}\) on the structure (control given in a feedback form).</pr>
+
+<br>
+<p align="center">
+  <img src="{{ site.baseurl }}/images/velocity_magnitude.jpeg" alt="fluid_velocity" width="450">
+</p>
+<p style="text-align: center; margin-top: 10px;">
+  Figure 2: Magnitude of the stationary fluid velocity when \(Re=200\).
+</p>
+
+<p>We treat the numerical implemention of the direct problem by using the Arbitrary Lagrangian-Eulerian (ALE) approach and a semi-implicit time stepping scheme. Fig. 3 shows the evolution of the mesh around the structure (without control). </p>
+
+<br>
+<p align="center">
+  <img src="{{ site.baseurl }}/images/mesh.gif" alt="Mesh animation" width="450">
+</p>
+<p style="text-align: center; margin-top: 10px;">
+  Figure 3: Evolution of the mesh around the structure (without control).
+</p>
+
+<p>To obtain the feedback law \(\mathcal{K}\) (based on the linearized system), which is assumed to be given in a feedback form, we solve a low-dimensional Riccati equation.</p>
+
+<li><u>Spectrum</u></li><br>
+
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+
+  <div>
+    <img src="{{ site.baseurl }}/images/spectrum_fs_Re=200_alpha_01_no_control.png" alt="Imagen 1" width="450">
+    <p>Spectrum of the FSI operator \( \mathcal{A} \).</p>
+  </div>
+
+  <div>
+    <img src="{{ site.baseurl }}/images/spectrum_fs_Re=200_alpha_01_with_control.png" alt="Imagen 2" width="450">
+    <p>Spectrum of the operator \( \mathcal{A}-B\mathcal{K} \).</p>
+  </div>
+
+</div>
+<p style="text-align: center; margin-top: 10px;">
+  Figure 4: Comparison of the spectrum \(\sigma(\mathcal{A})\) and \(\sigma(\mathcal{A}-B\mathcal{K})\). Here, 
+  \(B\) is the control operator.
+</p>
+<br>
+<li><u>Evolution of the magnitude of the fluid velocity without and with control</u></li><br>
+
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+
+  <div>
+    <img src="{{ site.baseurl }}/images/without_control.gif" alt="Mesh Animation" width="450">
+  </div>
+
+  <div>
+    <img src="{{ site.baseurl }}/images/with_control.gif" alt="Simulation Animation" width="450">
+  </div>
+</div>
+<p style="text-align: center; margin-top: 10px;">
+  Figure 5: Fluid velocity magnitude without and with control.
+</p>
+</html>
