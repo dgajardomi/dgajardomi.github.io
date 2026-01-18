@@ -12,13 +12,13 @@ author_profile: true
 
 
 <p><u><h3>Context</h3></u></p>
-<p>We consider the fluid-structure interaction (FSI) system in which the fluid is governed by the two–dimensional incompressible Navier–Stokes equations with mixed boundary conditions, while the structure, immersed in the fluid, is modeled by the Euler–Bernoulli equations with damping, with one end clamped and the other free:<br>
+<p>We consider the fluid-structure interaction (FSI) system in which the fluid is governed by the incompressible Navier–Stokes equations in a two–dimensional domain with mixed boundary conditions, while the structure, immersed in the fluid, is modeled by the Euler–Bernoulli equations with damping, with one end clamped and the other free. The system is given by<br>
 \[\partial_t\mathbf{u} + (\mathbf{u}\cdot\nabla)\mathbf{u} - \text{div}\hspace{0.1cm}\sigma(\mathbf{u}, p)  = 0, 
 \hspace{0.2cm} \text{div}\hspace{0.1cm}\mathbf{u} = 0\hspace{0.2cm}\text{in}\hspace{0.1cm} Q_{\eta}^{\infty}:= \bigcup_{t\in(0,\infty)}\{t\}\times\Omega_{\eta(t)},\]
 \[\text{+ Mixed boundary condition + Initial condition + kinematic condition},\]
-\[\partial_t^2\eta + \alpha\Delta_s^2\eta + \gamma\Delta_s^2\eta_t = H(\mathbf{u}, p, \eta) + \textcolor{blue}{f} + f_s \hspace{0.2cm}\text{in}\hspace{0.1cm}(0,\infty)\times (0,\ell_s),\]
+\[\partial_t^2\eta + \alpha\Delta_s^2\eta + \gamma\Delta_s^2\eta_t = H(\mathbf{u}, p, \eta) + \textcolor{brown}{f} + f_s \hspace{0.2cm}\text{in}\hspace{0.1cm}(0,\infty)\times (0,\ell_s),\]
 \[\text{+ Boundary conditions + Initial condition},\]
-where \(\mathbf{u}\) and \(p\) represent the fluid velocity and the pressure, respectively, and \(\eta\) the displacement of the structure. Here, \(\sigma(\mathbf{u},p)\) represents the Cauchy stress tensor, \(H=H(\mathbf{u}, p, \eta)\) the force exerted by the fluid on the structure (acting on its upper and lower parts), \(\textcolor{blue}{f}\) is the control, and \(f_s\) a given constant force.<br><br>
+where \(\mathbf{u}\) and \(p\) represent the fluid velocity and the pressure, respectively, and \(\eta\) the displacement of the structure. Here, \(\sigma(\mathbf{u},p)\) represents the Cauchy stress tensor, \(H=H(\mathbf{u}, p, \eta)\) the force exerted by the fluid on the structure (acting on its upper and lower parts), \(\textcolor{brown}{f}\) is the control, and \(f_s\) a given constant force.<br><br>
 
 The geometrical configuration is shown in Fig. 1.</p>
 <br>
@@ -31,7 +31,7 @@ The geometrical configuration is shown in Fig. 1.</p>
 <p><u><h3>Numerical tests</h3></u></p>
 <p>In the numerical simulations shown below, we use a Reynolds number \(Re = 200\), a rigidy coefficient \(\alpha=10^{-1}\), and a damping coefficient \(\gamma=10^{-6}\).</p>
 
-<pr>Our objective is to stabilizes the FSI system around a stationary solution (Fig. 2 shows the magnitude of the stationary fluid velocity) by applying a force \(\textcolor{blue}{f}\) on the structure (control given in a feedback form).</pr>
+<pr>Our objective is to stabilizes the FSI system around a stationary solution (Fig. 2 shows the magnitude of the stationary fluid velocity) by applying a force \(\textcolor{brown}{f}\) on the structure (control given in a feedback form).</pr>
 
 <br>
 <p align="center">
