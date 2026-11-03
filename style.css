@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    color: #333;
+    background-color: #f7f4ee;
+    line-height: 1.6;
+}
+
+
+h1,
+h2 {
+    font-family: Georgia, serif;
+}
+
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+header {
+    border-bottom: 1px solid #ddd;
+
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #2563eb;
+    text-decoration: none;
+
+    margin-right: 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: #dce6f0;
+
+}
+
+main {
+    margin-top: 30px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #222;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.presentacion {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 25px;
+
+}
+
+.presentacion img {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50px;
+    margin-left: -30px;   
+}
+
+.ilustracion {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ilustracion figure {
+    width: 88%;
+    margin: 0;
+}
+
+.ilustracion figcaption {
+    font-size: 14px;
+    color: #555555;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.ilustracion img {
+    width: 100%;
+    height: auto;
+}
+
+.imagenes-investigacion {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.imagenes-investigacion figure {
+    width: 68%;
+    margin: 0;
+}
+
+.imagenes-investigacion img {
+    width: 100%;
+    height: auto;
+}
+
+.imagenes-investigacion figcaption {
+    font-size: 14px;
+    color: #555555;
+    text-align: center;
+    margin-top: 8px;
+}
+
+
+.importante {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .presentacion {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .presentacion {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+}
+
+#publicaciones li {
+    margin-bottom: 15px;
+}
+
+
+footer {
+    border-top: 1px solid #ddd;
+
+    margin-top: 60px;
+    padding-top: 20px;
+
+    color: #777;
+    font-size: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.presentacion h1 {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.contenido {
+    background-color: #fffdf8;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;   
+    margin-top: -30px;     
+
+}
+
+.enlace-externo {
+    color: #2563eb;
+}
+
+.enlace-externo:hover {
+    background-color: #eef3f8;
+}
